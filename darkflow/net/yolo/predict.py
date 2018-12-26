@@ -101,7 +101,7 @@ def postprocess(self, net_out, im, save = True):
 			resultsForJSON.append({"label": mess, "confidence": float('%.2f' % confidence), "topleft": {"x": left, "y": top}, "bottomright": {"x": right, "y": bot}})
 			continue
 		if self.FLAGS.txt:
-			resultsForTxt += "%s %s %s %s %s %s".format(mess, str(float('%.6f' % confidence)), left, top, right, bot)
+			resultsForTxt += "%s %s %s %s %s %s" % (mess, str(float('%.6f' % confidence)), left, top, right, bot)
 			resultsForTxt += os.linesep
 			continue
 
